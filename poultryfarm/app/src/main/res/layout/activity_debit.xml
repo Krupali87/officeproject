@@ -1,0 +1,236 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".DebitActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/blue">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/poultry_farm"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold"/>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+    <TextView
+        android:id="@+id/txtcrd"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Debit"
+        android:gravity="center"
+        android:layout_marginTop="40dp"
+        android:textSize="40dp"
+        android:textColor="@color/blue"
+        android:textStyle="bold"/>
+
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/btndate"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/edtshape"
+        android:layout_marginTop="30dp"
+        android:text="@string/date_picker"
+        android:textSize="20dp"
+        android:textStyle="bold"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:textAllCaps="false"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <EditText
+            android:id="@+id/edtbillnumber"
+            android:layout_width="120dp"
+            android:layout_height="40dp"
+            android:hint="@string/bill_number"
+            android:background="@drawable/btnshape"
+            android:layout_marginTop="50dp"
+            android:gravity="center_horizontal"
+            android:layout_centerHorizontal="true"
+            android:padding="10dp"
+            android:textColorHint="@color/black"/>
+
+        <TextView
+            android:id="@+id/txtdes1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/description"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="10dp"
+            android:layout_below="@id/edtbillnumber"
+            android:textSize="18dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/txtqty2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/qut"
+            android:textSize="18dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+           android:layout_below="@id/edtbillnumber"
+            android:layout_toRightOf="@id/txtdes1"
+            android:layout_marginStart="20dp"/>
+
+        <TextView
+            android:id="@+id/txtprice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/price"
+            android:textSize="18dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginTop="20dp"
+            android:layout_below="@id/edtbillnumber"
+            android:layout_toRightOf="@id/txtqty2"
+            android:layout_marginStart="20dp"/>
+
+        <TextView
+            android:id="@+id/txtweight"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/weight"
+            android:textSize="18dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_below="@id/edtbillnumber"
+            android:layout_toRightOf="@id/txtprice"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"/>
+
+        <TextView
+            android:id="@+id/txttotal1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/total"
+            android:textSize="18dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_below="@id/edtbillnumber"
+            android:layout_toRightOf="@id/txtweight"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="20dp"/>
+
+        <TextView
+            android:id="@+id/txtdesvalue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtdes1"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="10dp"
+            android:textSize="16dp"/>
+
+        <TextView
+            android:id="@+id/txtqtyvalue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtqty2"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="35dp"
+            android:layout_toRightOf="@id/txtdesvalue"
+            android:textSize="16dp"/>
+
+        <TextView
+            android:id="@+id/txtpricevalue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtprice"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="15dp"
+            android:layout_toRightOf="@id/txtqtyvalue"
+            android:textSize="16dp"/>
+
+
+        <TextView
+            android:id="@+id/txtweightvalue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtweight"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="15dp"
+            android:layout_toRightOf="@id/txtpricevalue"
+            android:textSize="16dp"/>
+
+        <TextView
+            android:id="@+id/txttotalvalue"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/txtprice"
+            android:layout_marginTop="10dp"
+            android:layout_marginStart="30dp"
+            android:layout_toRightOf="@id/txtweightvalue"
+            android:textSize="16dp"/>
+
+
+
+    </RelativeLayout>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/addnew"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edtshape"
+        android:backgroundTint="@color/blue"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp"
+        android:layout_marginTop="20dp"
+        android:text="@string/add_new"
+        android:textAllCaps="false"
+        android:drawableStart="@drawable/baseline_add_24"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:elevation="15dp"
+        android:stateListAnimator="@null"
+        android:paddingStart="50dp"
+        android:paddingEnd="50dp"
+        android:textSize="20sp"/>
+
+    <Button
+        android:id="@+id/create"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:backgroundTint="#EA0D0D"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp"
+        android:layout_marginTop="150dp"
+        android:text="Debit"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:elevation="15dp"
+        android:stateListAnimator="@null"
+        android:paddingStart="50dp"
+        android:paddingEnd="50dp"
+        android:textSize="20sp"/>
+
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,197 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".CreateCycleDataActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/blue">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/poultry_farm"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold"/>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/create_cycle"
+        android:gravity="center"
+        android:layout_marginTop="50dp"
+        android:textSize="40dp"
+        android:textColor="@color/blue"
+        android:textStyle="bold"/>
+
+   <androidx.appcompat.widget.AppCompatButton
+       android:layout_width="match_parent"
+       android:layout_height="60dp"
+       android:background="@drawable/edtshape"
+       android:layout_marginTop="30dp"
+       android:text="@string/date_picker"
+       android:textSize="20dp"
+       android:textStyle="bold"
+       android:layout_marginLeft="30dp"
+       android:layout_marginRight="30dp"
+       android:textAllCaps="false"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/txtdes"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/description"
+            android:layout_marginTop="20dp"
+            android:layout_marginStart="10dp"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"/>
+
+        <TextView
+            android:id="@+id/txtqty"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/qut"
+            android:layout_toRightOf="@id/txtdes"
+            android:layout_marginTop="20dp"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginStart="40dp"/>
+
+        <TextView
+            android:id="@+id/txtpri"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/price"
+            android:layout_toRightOf="@id/txtqty"
+            android:layout_marginTop="20dp"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginStart="40dp"/>
+
+        <TextView
+            android:id="@+id/txttotal"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/total"
+            android:layout_toRightOf="@id/txtpri"
+            android:layout_marginTop="20dp"
+            android:textSize="20dp"
+            android:textColor="@color/black"
+            android:textStyle="bold"
+            android:layout_marginStart="40dp"/>
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="20dp">
+
+        <EditText
+            android:id="@+id/edtitemname"
+            android:layout_width="130dp"
+            android:layout_height="45dp"
+            android:background="@drawable/edittextshapenew"
+            android:hint="@string/item_name"
+            android:textColorHint="@color/black"
+            android:padding="10dp"/>
+
+        <EditText
+            android:id="@+id/edtqty"
+            android:layout_width="80dp"
+            android:layout_height="45dp"
+            android:layout_toRightOf="@id/edtitemname"
+            android:background="@drawable/edittextshapenew"
+            android:textColorHint="@color/black"
+            android:layout_marginStart="15dp"
+            android:padding="10dp"/>
+
+        <EditText
+            android:id="@+id/edtprice"
+            android:layout_width="60dp"
+            android:layout_height="45dp"
+            android:layout_toRightOf="@id/edtqty"
+            android:background="@drawable/edittextshapenew"
+            android:textColorHint="@color/black"
+            android:layout_marginStart="15dp"
+            android:padding="10dp"/>
+
+
+        <EditText
+            android:id="@+id/edttotal"
+            android:layout_width="100dp"
+            android:layout_height="45dp"
+            android:layout_toRightOf="@id/edtprice"
+            android:background="@drawable/edittextshapenew"
+            android:textColorHint="@color/black"
+            android:layout_marginStart="15dp"
+            android:padding="10dp"/>
+
+
+    </RelativeLayout>
+
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/addnew"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edtshape"
+        android:backgroundTint="@color/blue"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp"
+        android:layout_marginTop="40dp"
+        android:text="@string/add_new"
+        android:textAllCaps="false"
+        android:drawableStart="@drawable/baseline_add_24"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:elevation="15dp"
+        android:stateListAnimator="@null"
+        android:paddingStart="50dp"
+        android:paddingEnd="50dp"
+        android:textSize="20sp"/>
+
+    <androidx.appcompat.widget.AppCompatButton
+        android:id="@+id/create"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/edtshape"
+        android:backgroundTint="@color/blue"
+        android:layout_marginLeft="100dp"
+        android:layout_marginRight="100dp"
+        android:layout_marginTop="150dp"
+        android:text="@string/create"
+        android:textAllCaps="false"
+        android:textColor="@color/black"
+        android:textStyle="bold"
+        android:textAlignment="center"
+        android:elevation="15dp"
+        android:stateListAnimator="@null"
+        android:paddingStart="50dp"
+        android:paddingEnd="50dp"
+        android:textSize="20sp"/>
+
+
+
+</LinearLayout>

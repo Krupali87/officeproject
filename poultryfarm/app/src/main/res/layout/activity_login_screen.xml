@@ -1,0 +1,109 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".LoginScreenActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/blue">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/poultry_farm"
+                android:textColor="@color/white"
+                android:textSize="30sp"
+                android:textStyle="bold"/>
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="230dp"
+        android:layout_height="230dp"
+        app:cardElevation="25dp"
+        android:layout_gravity="center"
+        android:layout_marginTop="60dp"
+        app:cardCornerRadius="160dp" >
+
+        <ImageView
+            android:layout_width="200dp"
+            android:layout_height="200dp"
+            android:layout_gravity="center"
+            android:src="@drawable/logo" />
+    </androidx.cardview.widget.CardView>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/admin_login"
+            android:textStyle="bold"
+            android:textSize="30sp"
+            android:textColor="@color/tctblack"
+            android:gravity="center"
+            android:layout_marginTop="30dp"/>
+
+      <EditText
+          android:id="@+id/edtusername"
+          android:layout_width="match_parent"
+          android:layout_height="50dp"
+          android:background="@drawable/edtshape"
+          android:layout_marginLeft="30dp"
+          android:layout_marginRight="30dp"
+          android:layout_marginTop="20dp"
+          android:hint="@string/username"
+          android:textColorHint="@color/black"
+          android:textStyle="bold"
+          android:gravity="center"/>
+
+    <EditText
+        android:id="@+id/edtpassword"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:background="@drawable/edtshape"
+        android:layout_marginLeft="30dp"
+        android:layout_marginRight="30dp"
+        android:layout_marginTop="20dp"
+        android:hint="@string/password"
+        android:textColorHint="@color/black"
+        android:textStyle="bold"
+        android:gravity="center"/>
+
+   <androidx.appcompat.widget.AppCompatButton
+       android:id="@+id/btnlogin"
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:background="@drawable/edtshape"
+       android:backgroundTint="@color/blue"
+       android:layout_marginLeft="100dp"
+       android:layout_marginRight="100dp"
+       android:layout_marginTop="25dp"
+       android:text="@string/login"
+       android:textAllCaps="false"
+       android:textColor="@color/black"
+       android:textStyle="bold"
+       android:textAlignment="center"
+       android:elevation="10dp"
+       android:stateListAnimator="@null"
+       android:textSize="20sp"/>
+
+
+
+
+
+
+
+
+
+
+</LinearLayout>

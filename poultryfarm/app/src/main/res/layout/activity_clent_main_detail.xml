@@ -1,0 +1,651 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ClentMainDetailActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/blue">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/apptxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/poultry_farm"
+                    android:textColor="@color/white"
+                    android:textSize="30sp"
+                    android:textStyle="bold"/>
+
+                <ImageView
+                    android:id="@+id/imgpdf"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:src="@drawable/pdf"
+                   android:layout_toRightOf="@id/apptxt"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="40dp"/>
+
+                <Button
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/imgpdf"
+                    android:layout_marginStart="30dp"
+                    android:backgroundTint="@color/black"
+                    android:textColor="@color/white"
+                    android:text="Final"
+                    android:textSize="20dp"/>
+
+
+
+            </RelativeLayout>
+
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+
+
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card1"
+            android:layout_width="match_parent"
+            android:layout_height="170dp"
+            android:backgroundTint="@color/light_grey"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            app:cardCornerRadius="10dp"
+            android:layout_marginTop="10dp">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+            <ImageView
+                android:id="@+id/img1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/person"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/txtcn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/client_name"
+                android:layout_toRightOf="@id/img1"
+                android:layout_marginTop="7dp"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/txtcname"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/city_name"
+                    android:layout_marginStart="5dp"
+                    android:layout_toRightOf="@id/img1"
+                    android:layout_below="@id/txtcn"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/avg"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/average"
+                    android:layout_below="@id/img1"
+                    android:layout_marginTop="20dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="18dp"/>
+
+                <TextView
+                    android:id="@+id/avgvalue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                   android:layout_toRightOf="@id/avg"
+                    android:layout_marginTop="65dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="16dp"/>
+
+                <TextView
+                    android:id="@+id/cpb"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/cpb"
+                    android:layout_below="@id/avg"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="18dp"/>
+
+                <TextView
+                    android:id="@+id/cpbvalue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/cpb"
+                    android:layout_marginTop="90dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="16dp"/>
+
+                <TextView
+                    android:id="@+id/totalfeed"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/total_feed"
+                    android:layout_below="@id/cpb"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="18dp"/>
+
+                <TextView
+                    android:id="@+id/totalfeedvalue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/totalfeed"
+                    android:layout_marginTop="113dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="16dp"/>
+
+                <TextView
+                    android:id="@+id/fcr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/fcr"
+                    android:layout_below="@id/totalfeed"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginStart="5dp"
+                    android:textStyle="bold"
+                    android:textSize="18dp"/>
+
+                <TextView
+                    android:id="@+id/fcrvalue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/fcr"
+                    android:layout_marginTop="145dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="16dp"/>
+
+               <TextView
+                   android:id="@+id/cfcr"
+                   android:layout_width="wrap_content"
+                   android:layout_height="wrap_content"
+                   android:text="@string/cfcr"
+                   android:textSize="18dp"
+                   android:layout_toRightOf="@id/fcrvalue"
+                   android:layout_marginTop="143dp"
+                   android:layout_marginStart="80dp"
+                   android:textColor="@color/black"
+                   android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/cfcrvalue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/cfcr"
+                    android:layout_marginTop="144dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="16dp"/>
+
+                <TextView
+                    android:id="@+id/dead"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/dead"
+                    android:textSize="18dp"
+                    android:layout_toRightOf="@id/cfcrvalue"
+                    android:layout_marginTop="143dp"
+                    android:layout_marginStart="80dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
+
+                <TextView
+                    android:id="@+id/deadvalue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/dead"
+                    android:layout_marginTop="145dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"
+                    android:textSize="16dp"/>
+
+                <TextView
+                    android:id="@+id/cr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/credit"
+                    android:layout_toRightOf="@id/txtcname"
+                    android:layout_marginStart="80dp"
+                    android:textColor="#45920A"
+                    android:textStyle="bold"
+                    android:textSize="18dp"/>
+
+                <TextView
+                    android:id="@+id/crvalue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/cr"
+                    android:textColor="#45920A"
+                    android:textStyle="bold"
+                    android:textSize="18dp"/>
+
+                <TextView
+                    android:id="@+id/dr"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/debit"
+                    android:layout_marginStart="190dp"
+                    android:layout_below="@id/cr"
+                    android:textColor="#EA0D0D"
+                    android:textStyle="bold"
+                    android:textSize="18dp"/>
+
+                <TextView
+                    android:id="@+id/drvalue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/dr"
+                    android:textColor="#EA0D0D"
+                    android:textStyle="bold"
+                    android:layout_below="@id/crvalue"
+                    android:textSize="18dp"/>
+
+
+                <TextView
+                    android:id="@+id/cur"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/current"
+                    android:layout_marginStart="190dp"
+                    android:layout_below="@id/dr"
+                    android:textColor="#655004"
+                    android:textStyle="bold"
+                    android:textSize="18dp"/>
+
+
+                <TextView
+                    android:id="@+id/curvalue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/cur"
+                    android:textColor="#655004"
+                    android:textStyle="bold"
+                    android:layout_below="@id/drvalue"
+                    android:textSize="18dp"/>
+
+                <TextView
+                    android:id="@+id/totalbirds"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/total_given_birds"
+                    android:layout_marginStart="160dp"
+                    android:layout_below="@id/cur"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:textColor="#45920A"
+                    android:layout_marginTop="5dp"/>
+
+                <TextView
+                    android:id="@+id/totalbirdsvalue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/totalbirds"
+                    android:textColor="#655004"
+                    android:textStyle="bold"
+                    android:layout_marginTop="5dp"
+                    android:layout_below="@id/curvalue"
+                    android:textSize="18dp"/>
+
+                <TextView
+                    android:id="@+id/rmbirds"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/remaining_birds"
+                    android:layout_marginStart="162dp"
+                    android:layout_below="@id/totalbirds"
+                    android:textSize="18dp"
+                    android:textStyle="bold"
+                    android:textColor="#EA0D0D"
+                   />
+
+                <TextView
+                    android:id="@+id/rmbirdsvalue"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_toRightOf="@id/rmbirds"
+                    android:textColor="#EA0D0D"
+                    android:textStyle="bold"
+                    android:layout_marginTop="100dp"
+                    android:textSize="18dp"/>
+
+            </RelativeLayout>
+
+        </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card2"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:backgroundTint="@color/light_grey"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        app:cardCornerRadius="10dp"
+        android:layout_marginTop="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tctdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="23/10/2022"
+               android:layout_marginStart="140dp"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/black"
+                android:textSize="20dp"/>
+
+
+                <TextView
+                    android:id="@+id/txtdes"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/description"
+                    android:layout_below="@id/tctdate"
+                    android:textSize="18dp"
+                    android:textColor="@color/black"
+                    android:textStyle="bold"/>
+
+           <TextView
+               android:id="@+id/txtqty"
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="@string/qut"
+               android:textSize="18dp"
+               android:textColor="@color/black"
+               android:textStyle="bold"
+               android:layout_below="@id/tctdate"
+               android:layout_toRightOf="@id/txtdes"
+               android:layout_marginStart="40dp"/>
+
+            <TextView
+                android:id="@+id/txtpri"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/price"
+                android:textSize="18dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_below="@id/tctdate"
+                android:layout_toRightOf="@id/txtqty"
+                android:layout_marginStart="40dp"/>
+
+            <TextView
+                android:id="@+id/txttotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/total"
+                android:textSize="18dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_below="@id/tctdate"
+                android:layout_toRightOf="@id/txtpri"
+                android:layout_marginStart="40dp"/>
+
+            <TextView
+                android:id="@+id/txtxdesvalue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtdes"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="5dp"
+                android:textSize="16dp"/>
+
+
+            <TextView
+                android:id="@+id/txtxqtyvalue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtqty"
+                android:layout_toRightOf="@id/txtxdesvalue"
+                android:layout_marginStart="120dp"
+                android:layout_marginTop="10dp"
+                android:textSize="16dp"/>
+
+            <TextView
+                android:id="@+id/txtxpricevalue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtpri"
+                android:layout_toRightOf="@id/txtxqtyvalue"
+                android:layout_marginStart="70dp"
+                android:layout_marginTop="10dp"
+                android:textSize="16dp"/>
+
+            <TextView
+                android:id="@+id/txtxtotalvalue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txttotal"
+                android:layout_toRightOf="@id/txtxpricevalue"
+                android:layout_marginStart="80dp"
+                android:layout_marginTop="10dp"
+                android:textSize="16dp"/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card3"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:backgroundTint="@color/light_grey"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        app:cardCornerRadius="10dp"
+        android:layout_marginTop="10dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/txtdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="23/10/2022"
+                android:layout_marginStart="140dp"
+                android:layout_marginTop="10dp"
+                android:textStyle="bold"
+                android:layout_marginBottom="10dp"
+                android:textColor="@color/black"
+                android:textSize="20dp"/>
+
+            <TextView
+                android:id="@+id/txtdes1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/description"
+                android:layout_below="@id/txtdate"
+                android:textSize="18dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"/>
+
+
+            <TextView
+                android:id="@+id/txtqty2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/qut"
+                android:textSize="18dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_below="@id/txtdate"
+                android:layout_toRightOf="@id/txtdes1"
+                android:layout_marginStart="20dp"/>
+
+
+            <TextView
+                android:id="@+id/txtprice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/price"
+                android:textSize="18dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_below="@id/txtdate"
+                android:layout_toRightOf="@id/txtqty2"
+                android:layout_marginStart="20dp"/>
+
+            <TextView
+                android:id="@+id/txtweight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/weight"
+                android:textSize="18dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_below="@id/txtdate"
+                android:layout_toRightOf="@id/txtprice"
+                android:layout_marginStart="20dp"/>
+
+            <TextView
+                android:id="@+id/txttotal1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/total"
+                android:textSize="18dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_below="@id/txtdate"
+                android:layout_toRightOf="@id/txtweight"
+                android:layout_marginStart="20dp"/>
+
+            <TextView
+                android:id="@+id/txtdesvalue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtdes1"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="5dp"
+                android:textSize="16dp"/>
+
+
+            <TextView
+                android:id="@+id/txtqtyvalue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtqty2"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="35dp"
+                android:layout_toRightOf="@id/txtdesvalue"
+                android:textSize="16dp"/>
+
+            <TextView
+                android:id="@+id/txtpricevalue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtprice"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="15dp"
+                android:layout_toRightOf="@id/txtqtyvalue"
+                android:textSize="16dp"/>
+
+            <TextView
+                android:id="@+id/txtweightvalue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtweight"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="15dp"
+                android:layout_toRightOf="@id/txtpricevalue"
+                android:textSize="16dp"/>
+
+            <TextView
+                android:id="@+id/txttotalvalue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtprice"
+                android:layout_marginTop="10dp"
+                android:layout_marginStart="30dp"
+                android:layout_toRightOf="@id/txtweightvalue"
+                android:textSize="16dp"/>
+
+        </RelativeLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="5dp"
+        android:layout_height="wrap_content">
+
+
+        <Button
+            android:id="@+id/btncr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#3f9B06"
+            android:layout_marginStart="10dp"
+            android:text="Credit"/>
+
+        <Button
+            android:id="@+id/btndb"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#EA0D0D"
+            android:layout_toRightOf="@id/btncr"
+            android:layout_marginStart="50dp"
+            android:text="Debit"/>
+
+        <Button
+            android:id="@+id/btnother"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:backgroundTint="#E6EB0F"
+            android:layout_toRightOf="@id/btndb"
+            android:layout_marginStart="50dp"
+            android:textColor="@color/black"
+            android:text="@string/others"/>
+
+
+
+
+    </RelativeLayout>
+
+
+
+
+
+
+
+
+
+
+
+</LinearLayout>

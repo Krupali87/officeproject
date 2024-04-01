@@ -1,0 +1,241 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".SupplierbillActivity">
+
+    <com.google.android.material.appbar.AppBarLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:fitsSystemWindows="true">
+
+        <androidx.appcompat.widget.Toolbar
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/blue">
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <TextView
+                    android:id="@+id/apptxt"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/poultry_farm"
+                    android:textColor="@color/white"
+                    android:textSize="30sp"
+                    android:textStyle="bold"/>
+
+                <ImageView
+                    android:id="@+id/imgpdf"
+                    android:layout_width="100dp"
+                    android:layout_height="100dp"
+                    android:src="@drawable/pdf"
+                    android:layout_toRightOf="@id/apptxt"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginStart="150dp"/>
+
+
+            </RelativeLayout>
+
+
+        </androidx.appcompat.widget.Toolbar>
+    </com.google.android.material.appbar.AppBarLayout>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card1"
+        android:layout_width="match_parent"
+        app:cardBackgroundColor="@color/light_grey"
+        app:cardCornerRadius="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_margin="20dp"
+        android:layout_height="130dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="70dp"
+                android:layout_height="70dp"
+                android:src="@drawable/person"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/txtcl"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/client_name"
+                android:layout_toRightOf="@id/img"
+                android:layout_marginTop="10dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:textSize="20dp"/>
+
+
+            <TextView
+                android:id="@+id/txtct"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/city_name"
+                android:layout_below="@id/txtcl"
+                android:layout_toRightOf="@id/img"
+                android:textColor="@color/black"
+                android:textSize="16dp"/>
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/card2"
+        android:layout_width="match_parent"
+        app:cardBackgroundColor="@color/light_grey"
+        app:cardCornerRadius="20dp"
+        android:layout_margin="20dp"
+        android:layout_height="200dp">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:id="@+id/txtbill"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/bill_no"
+                android:textColor="@color/black"
+                android:layout_marginTop="5dp"
+                android:layout_marginStart="10dp"
+                android:textSize="20dp"/>
+
+
+            <TextView
+                android:id="@+id/tctdate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="23/10/2022"
+                android:layout_below="@id/txtbill"
+                android:layout_marginStart="140dp"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="20dp"/>
+            
+            <ImageView
+                android:layout_width="50dp"
+                android:layout_height="50dp"
+                android:src="@drawable/pdf"
+                android:layout_below="@id/txtbill"
+                android:layout_toRightOf="@id/tctdate"
+               android:layout_alignParentRight="true"
+                android:layout_marginTop="-20dp"
+                android:layout_marginStart="60dp"/>
+
+            <TextView
+                android:id="@+id/billqty"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/qut"
+                android:layout_below="@id/tctdate"
+                android:layout_marginStart="50dp"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/billprice"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/price"
+                android:layout_below="@id/tctdate"
+                android:layout_marginStart="30dp"
+                android:layout_toRightOf="@id/billqty"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/billweight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/weight"
+                android:layout_below="@id/tctdate"
+                android:layout_marginStart="30dp"
+                android:layout_toRightOf="@id/billprice"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"/>
+
+
+            <TextView
+                android:id="@+id/billtotal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/total"
+                android:layout_below="@id/tctdate"
+                android:layout_marginStart="30dp"
+                android:layout_toRightOf="@id/billweight"
+                android:textSize="20dp"
+                android:textColor="@color/black"
+                android:textStyle="bold"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/billqtyvalue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="13352"
+                android:layout_below="@id/billqty"
+                android:layout_marginStart="45dp"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/billpricevalue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="13352"
+                android:layout_below="@id/billprice"
+                android:layout_toRightOf="@id/billqtyvalue"
+                android:layout_marginStart="28dp"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/billweightvalue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="13352"
+                android:textAlignment="center"
+                android:layout_below="@id/billweight"
+                android:layout_toRightOf="@id/billpricevalue"
+                android:layout_marginStart="40dp"
+                android:layout_marginTop="10dp"/>
+
+            <TextView
+                android:id="@+id/billtotalvalue"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="13352"
+                android:textAlignment="center"
+                android:layout_below="@id/billtotal"
+                android:layout_toRightOf="@id/billweightvalue"
+                android:layout_marginStart="50dp"
+                android:layout_marginTop="10dp"/>
+
+        </RelativeLayout>
+
+
+    </androidx.cardview.widget.CardView>
+
+
+
+</LinearLayout>
